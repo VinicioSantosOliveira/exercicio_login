@@ -7,88 +7,81 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      body: SizedBox(
-        height: double.infinity,
-        width: double.infinity,
-        child: Stack(
-          alignment: Alignment.bottomCenter,
-          children: [
-            const Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'Get your Money Under Control',
-                  style: TextStyle(color: Colors.white),
-                ),
-                Text(
-                  "Manage your expenses. Seamlessly.",
-                  style: TextStyle(color: Colors.white),
-                ),
-              ],
-            ),
-            //Buttom
-            Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Container(
-                  height: 60,
-                  width: double.infinity,
-                  margin: const EdgeInsets.only(
-                    left: 10,
-                    right: 10,
-                    bottom: 10,
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: SizedBox(
+          height: double.infinity,
+          width: double.infinity,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset('assets/Images/wings.png'),
+              const Text(
+                'Get your Money\nUnder Control',
+                style: TextStyle(color: Colors.white),
+                textAlign: TextAlign.center,
+              ),
+              const Text(
+                'Manage your expenses.\nSeamlessly.',
+                style: TextStyle(color: Colors.white),
+                textAlign: TextAlign.center,
+              ),
+              //Buttom
+              Container(
+                height: 60,
+                width: double.infinity,
+                decoration: const BoxDecoration(
+                  color: Colors.blueAccent,
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(10),
                   ),
-                  decoration: const BoxDecoration(
-                    color: Colors.blueAccent,
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(10),
+                ),
+                child: ElevatedButton(
+                  style: ButtonStyle(
+                    shape: MaterialStateProperty.all(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                        //side: BorderSide(color: Colors.red),
+                      ),
+                    ),
+                    backgroundColor: const MaterialStatePropertyAll(
+                      Colors.blueAccent,
                     ),
                   ),
-                  child: const Center(
-                    child: Text(
-                      'Sign Up with Email ID',
-                      style: TextStyle(color: Colors.white),
-                    ),
+                  onPressed: () {},
+                  child: const Text(
+                    'Sign Up with Email ID',
+                    style: TextStyle(color: Colors.white),
                   ),
                 ),
-                Container(
+              ),
+              InkWell(
+                onTap: () {},
+                child: Container(
                   height: 60,
                   width: double.infinity,
-                  margin: const EdgeInsets.only(
-                    left: 10,
-                    right: 10,
-                    bottom: 100,
-                  ),
                   decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.all(
                       Radius.circular(10),
                     ),
                   ),
-                  child: const Row(
+                  child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      ButtonBar(
-                        buttonPadding: EdgeInsets.all(8.0),
-                      ),
-                      Text(
-                        'Sign Up with Google',
-                        style: TextStyle(color: Colors.black),
-                      ),
+                      Image.asset('assets/Images/logoGoogle.png'),
+                      const Text('Sign Up with Google'),
                     ],
                   ),
                 ),
-              ],
-            ),
-            const Align(
-              alignment: Alignment.bottomCenter,
-              child: Padding(
+              ),
+              const Padding(
                 padding: EdgeInsets.only(bottom: 40),
-                child: Text('Already have an acconut? Sing in',
+                child: Text('Already have an acconut? Sign in',
                     style: TextStyle(color: Colors.white)),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
