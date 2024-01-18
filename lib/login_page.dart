@@ -13,8 +13,8 @@ class LoginPage extends StatelessWidget {
           height: double.infinity,
           width: double.infinity,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              const Spacer(),
               Image.asset('assets/Images/wings.png'),
               const Text(
                 'Get your Money\nUnder Control',
@@ -26,52 +26,61 @@ class LoginPage extends StatelessWidget {
                 style: TextStyle(color: Colors.white),
                 textAlign: TextAlign.center,
               ),
-              //Buttom
-              Container(
-                height: 60,
-                width: double.infinity,
-                decoration: const BoxDecoration(
-                  color: Colors.blueAccent,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(10),
-                  ),
-                ),
-                child: ElevatedButton(
-                  style: ButtonStyle(
-                    shape: MaterialStateProperty.all(
-                      RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0),
-                        //side: BorderSide(color: Colors.red),
-                      ),
-                    ),
-                    backgroundColor: const MaterialStatePropertyAll(
-                      Colors.blueAccent,
-                    ),
-                  ),
-                  onPressed: () {},
-                  child: const Text(
-                    'Sign Up with Email ID',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
+              const SizedBox(
+                height: 100,
               ),
-              InkWell(
-                onTap: () {},
+              //Buttom
+              Padding(
+                padding: const EdgeInsets.only(bottom: 15),
                 child: Container(
                   height: 60,
                   width: double.infinity,
                   decoration: const BoxDecoration(
-                    color: Colors.white,
+                    color: Colors.blueAccent,
                     borderRadius: BorderRadius.all(
                       Radius.circular(10),
                     ),
                   ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset('assets/Images/logoGoogle.png'),
-                      const Text('Sign Up with Google'),
-                    ],
+                  child: ElevatedButton(
+                    style: ButtonStyle(
+                      shape: MaterialStateProperty.all(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.0),
+                          //side: BorderSide(color: Colors.red),
+                        ),
+                      ),
+                      backgroundColor: const MaterialStatePropertyAll(
+                        Colors.blueAccent,
+                      ),
+                    ),
+                    onPressed: () {},
+                    child: const Text(
+                      'Sign Up with Email ID',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 50),
+                child: InkWell(
+                  onTap: () {},
+                  child: Ink(
+                    height: 60,
+                    width: double.infinity,
+                    decoration: const BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(10),
+                      ),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset('assets/Images/logoGoogle.png'),
+                        const Text('Sign Up with Google'),
+                      ],
+                    ),
                   ),
                 ),
               ),
