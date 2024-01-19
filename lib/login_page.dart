@@ -15,15 +15,21 @@ class LoginPage extends StatelessWidget {
           child: Column(
             children: [
               const Spacer(),
-              Image.asset('assets/Images/wings.png'),
+              //Image.asset('assets/images/logo-wings.png'),
               const Text(
                 'Get your Money\nUnder Control',
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 35,
+                    fontWeight: FontWeight.bold),
                 textAlign: TextAlign.center,
               ),
               const Text(
                 'Manage your expenses.\nSeamlessly.',
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(
+                  color: Colors.grey,
+                  fontSize: 20,
+                ),
                 textAlign: TextAlign.center,
               ),
               const SizedBox(
@@ -56,7 +62,10 @@ class LoginPage extends StatelessWidget {
                     onPressed: () {},
                     child: const Text(
                       'Sign Up with Email ID',
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                      ),
                     ),
                   ),
                 ),
@@ -64,6 +73,7 @@ class LoginPage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(bottom: 50),
                 child: InkWell(
+                  borderRadius: BorderRadius.circular(10),
                   onTap: () {},
                   child: Ink(
                     height: 60,
@@ -77,8 +87,13 @@ class LoginPage extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Image.asset('assets/Images/logoGoogle.png'),
-                        const Text('Sign Up with Google'),
+                        //Image.asset('assets/images/logo-google.png'),
+                        const Text(
+                          'Sign Up with Google',
+                          style: TextStyle(
+                            fontSize: 16,
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -86,8 +101,13 @@ class LoginPage extends StatelessWidget {
               ),
               const Padding(
                 padding: EdgeInsets.only(bottom: 40),
-                child: Text('Already have an acconut? Sign in',
-                    style: TextStyle(color: Colors.white)),
+                child: Text(
+                  'Already have an acconut? Sign in',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                  ),
+                ),
               ),
             ],
           ),
