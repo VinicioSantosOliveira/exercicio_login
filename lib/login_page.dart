@@ -75,7 +75,7 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(bottom: 50),
+                padding: const EdgeInsets.only(bottom: 20),
                 child: InkWell(
                   borderRadius: BorderRadius.circular(10),
                   onTap: () {},
@@ -106,19 +106,34 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
               ),
+
               Padding(
-                padding: EdgeInsets.only(bottom: 40),
-                child: TextButton(
-                  onPressed: () {
-                    debugPrint('ola');
-                  },
-                  child: Text(
-                    'Already have an acconut? Sign in',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
+                padding: const EdgeInsets.only(bottom: 50),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text(
+                      'Already have an acconut?',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                      ),
                     ),
-                  ),
+                    TextButton(
+                      onPressed: () {
+                        debugPrint('ola');
+                      },
+                      child: const Text(
+                        'Sign in',
+                        style: TextStyle(
+                          decoration: TextDecoration.underline,
+                          decorationColor: Colors.white,
+                          color: Colors.white,
+                          fontSize: 16,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],
