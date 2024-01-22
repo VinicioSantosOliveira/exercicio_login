@@ -15,7 +15,11 @@ class LoginPage extends StatelessWidget {
           child: Column(
             children: [
               const Spacer(),
-              //Image.asset('assets/images/logo-wings.png'),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 30, vertical: 0),
+                child: Image.asset('assets/images/logo-wings.png'),
+              ),
               const Text(
                 'Get your Money\nUnder Control',
                 style: TextStyle(
@@ -87,7 +91,10 @@ class LoginPage extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        //Image.asset('assets/images/logo-google.png'),
+                        Padding(
+                          padding: const EdgeInsets.all(18.0),
+                          child: Image.asset('assets/images/logo-google.png'),
+                        ),
                         const Text(
                           'Sign Up with Google',
                           style: TextStyle(
@@ -99,13 +106,18 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
               ),
-              const Padding(
+              Padding(
                 padding: EdgeInsets.only(bottom: 40),
-                child: Text(
-                  'Already have an acconut? Sign in',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 16,
+                child: TextButton(
+                  onPressed: () {
+                    debugPrint('ola');
+                  },
+                  child: Text(
+                    'Already have an acconut? Sign in',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                    ),
                   ),
                 ),
               ),
