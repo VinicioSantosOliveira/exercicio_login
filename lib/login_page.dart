@@ -1,3 +1,4 @@
+import 'package:exercicio_login/register_page.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -78,7 +79,14 @@ class LoginPage extends StatelessWidget {
                 padding: const EdgeInsets.only(bottom: 20),
                 child: InkWell(
                   borderRadius: BorderRadius.circular(10),
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const RegisterPage(),
+                      ),
+                    );
+                  },
                   child: Ink(
                     height: 60,
                     width: double.infinity,
@@ -113,7 +121,7 @@ class LoginPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const Text(
-                      'Already have an acconut?',
+                      'Already have an account?',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 16,
