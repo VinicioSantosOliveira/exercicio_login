@@ -7,9 +7,37 @@ class RegisterPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('asdasd'),
+        centerTitle: true,
+        backgroundColor: Colors.grey[800],
+        iconTheme: const IconThemeData(color: Colors.white),
+        title: const Text(
+          'Register your Account',
+          style: TextStyle(color: Colors.white),
+        ),
       ),
-      body: Container(),
+      backgroundColor: Colors.black,
+      body: const Padding(
+        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 0),
+        child: SizedBox(
+          height: double.infinity,
+          width: double.infinity,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Padding(
+                padding: EdgeInsets.only(top: 100),
+                child: Text(
+                  'Register',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 25,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

@@ -64,7 +64,14 @@ class LoginPage extends StatelessWidget {
                         Colors.blueAccent,
                       ),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const RegisterPage(),
+                        ),
+                      );
+                    },
                     child: const Text(
                       'Sign Up with Email ID',
                       style: TextStyle(
@@ -79,14 +86,7 @@ class LoginPage extends StatelessWidget {
                 padding: const EdgeInsets.only(bottom: 20),
                 child: InkWell(
                   borderRadius: BorderRadius.circular(10),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const RegisterPage(),
-                      ),
-                    );
-                  },
+                  onTap: () {},
                   child: Ink(
                     height: 60,
                     width: double.infinity,
