@@ -1,18 +1,18 @@
-import 'package:exercicio_login/login_page.dart';
+import 'package:exercicio_login/src/login_exercise_1/login_page.dart';
 import 'package:flutter/material.dart';
 
-class SplashPage extends StatefulWidget {
-  const SplashPage({super.key});
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
 
   @override
-  State<SplashPage> createState() => _SplashPageState();
+  State<SplashScreen> createState() => _SplashPageState();
 }
 
-class _SplashPageState extends State<SplashPage> {
+class _SplashPageState extends State<SplashScreen> {
   @override
   void initState() {
     Future.delayed(
-      const Duration(seconds: 2),
+      const Duration(seconds: 5),
     ).then(
       (value) => Navigator.push(
         context,
@@ -27,9 +27,9 @@ class _SplashPageState extends State<SplashPage> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
-        child: Text('Splash'),
+        child: Image.asset('assets/images/logo-wings.png'),
       ),
     );
   }
