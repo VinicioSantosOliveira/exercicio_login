@@ -1,4 +1,4 @@
-import 'package:exercicio_login/src/login_exercise_1/register_page.dart';
+import 'package:exercicio_login/src/pages/login_exercise_1/register_page.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
